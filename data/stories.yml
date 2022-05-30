@@ -1,0 +1,112 @@
+version: "2.0"
+stories:
+- story: great
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: namee
+  steps:
+  - intent: give_name
+  - action: utter_greet_with_name
+
+- story: hoi_diem_chuan
+  steps:
+  - intent: diem_chuan
+  - action: action_custom_diem_chuan
+
+- story: hoi_chi_tieu
+  steps:
+  - intent: chi_tieu
+  - action: action_custom_chi_tieu
+
+- story: hoi_ma_nganh
+  steps:
+  - intent: ma_nganh
+  - action: action_custom_ma_nganh
+
+- story: hoi_nganh_hoc
+  steps:
+  - intent: ask_nganh_hoc
+  - action: action_custom_nganh_hoc
+
+- story: hoi_to_hop_mon
+  steps:
+  - intent: to_hop_mon
+  - action: action_custom_to_hop_mon
+
+- story: inf
+  steps:
+  - intent: ask_infor_uni
+  - action: utter_ask_infor_uni
+
+- story: moneyy
+  steps:
+  - intent: ask_tuition_money
+  - action: utter_ask_tuition_money
+
+- story: motanganhh
+  steps:
+  - intent: motanganh
+  - action: action_custom_mo_ta_nganh
+
+- story: byee
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: chane
+  steps:
+  - intent: bot_challenge
+  - action: utter_thanks
+
+- story: yess
+  steps:
+  - intent: ask_yes
+  - action: utter_ask_yes
+
+- story: noo
+  steps:
+  - intent: ask_no
+  - action: utter_ask_no
+
+- story: xet_hoc_ba
+  steps:
+  - intent: ts_hoc_ba
+  - action: utter_hocba
+
+- story: phuong_thuc1
+  steps:
+  - intent: pt1
+  - action: utter_pt1
+
+- story: phuong_thuc2
+  steps:
+  - intent: pt2
+  - action: utter_pt2
+
+- story: phuong_thuc3
+  steps:
+  - intent: pt3
+  - action: utter_pt3
+
+- story: tuvan
+  steps:
+  - intent: cauhoituvanvien
+  - action: utter_iamchatbot
+
+- story: laythongtin
+  steps:
+  - intent: thongtin
+  - action: utter_thongtin
+
+- story: luutt
+  steps:
+  - intent: luu_thongtin
+  - action: action_submit_results
+  - action: utter_luu_thongtin
+
+- story: thankss
+  steps:
+  - intent: thanks
+  - action: utter_thanks

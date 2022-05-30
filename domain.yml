@@ -1,0 +1,192 @@
+version: "2.0"
+
+intents:
+  - greet
+  - give_name
+  - thongtin
+  - luu_thongtin
+  - cauhoituvanvien
+  - ma_nganh
+  - to_hop_mon
+  - chi_tieu
+  - diem_chuan
+  - bot_challenge
+  - goodbye
+  - ask_nganh_hoc
+  - motanganh
+  - ts_hoc_ba
+  - pt1
+  - pt2
+  - pt3
+  - ask_tuition_money
+  - ask_yes
+  - ask_no
+  - ask_infor_uni
+  - thanks
+  
+
+entities:
+  - cust_sex
+  - cust_name
+  - nganh
+  - ma
+  - so_luong
+  - diem
+  - nam
+  - tohopmon
+  - mota
+  - truycap
+  - money
+  - nen
+  - ptxt
+  - pt1
+  - pt2
+  - pt3
+  - thongtin
+  - cauhoi
+
+
+slots:
+  cust_sex:
+    auto_fill: true
+    type: text
+  cust_name:
+    auto_fill: true
+    type: text
+  nganh:
+    type: text
+    influence_conversation: false
+  ptxt:
+    type: text
+  truycap:
+    type: text
+  money:
+    type: text
+  nen:
+    type: text 
+  so_luong:
+    type: text
+    influence_conversation: false
+  diem:
+    type: text
+    influence_conversation: false
+  nam: 
+    type: text
+    influence_conversation: false
+  ma:
+    type: text
+    influence_conversation: false
+  tohopmon:
+    type: text
+    influence_conversation: false
+  mota:
+    type: text
+    influence_conversation: false
+  pt1:
+    auto_fill: true
+    type: text
+  pt2:
+    auto_fill: true
+    type: text
+  pt3:
+    auto_fill: true
+    type: text
+  thongtin:
+    type: any
+    influence_conversation: false
+  cauhoi:
+    type: any
+    influence_conversation: false
+
+
+  
+responses:
+  utter_greet:
+  - text: "Xin chào! Mình có thể biết tên bạn không?"
+  - text: "Đại học Thủy Lợi xin chào! Mình có thể biết tên bạn không?" 
+  - text: "Xin chào tôi có thể giúp gì cho bạn?"
+  - text: "Bạn có thể cho tôi biết tên được chứ?"
+  utter_greet_with_name:
+  - text: "Đại học Thủy Lợi xin chào bạn {cust_name}"
+  - text: "Chào bạn {cust_name}, tôi có thể giúp gì cho bạn?"
+  utter_goodbye:
+  - text: "Tạm biệt, hẹn gặp lại bạn."
+  utter_iamchatbot:
+  - text: " Xin chào bạn! Tôi là chat bot tự động. Mời bạn để lại thông tin liên lạc với tư vấn viên "
+    buttons:
+      - title: "Gmail hoặc số điện thoại "
+        payload: "/thongtin"
+      - title: "Thoát"
+        payload: "/thanks"
+  utter_thanks:
+  - text: "Cảm ơn bạn, hẹn gặp lại !!! "
+  utter_luu_thongtin:
+  - text: " Câu hỏi: {cauhoi}\n
+          Tên : {cust_name}\n
+          Thông tin liên hệ : {thongtin}\n
+          Tư vấn viên sẽ sớm liên lạc lại với bạn, Đại học Thủy Lợi chúc bạn một ngày vui vẻ !!!"
+  utter_thongtin:
+  - text: " Mời bạn để lại thông tin gmail hoặc số điện thoại"
+  utter_hocba:
+  - text: " Đại học Thủy lợi có 3 phương thức xét tuyển như sau:
+           Bạn quan đang quan tâm tới loại phương thức nào? "
+    buttons:
+      - title: "Phương thức 1: Xét tuyển thẳng"
+        payload: "/pt1"
+      - title: "Phương thức 2: Xét tuyển học bạ"
+        payload: "/pt2"
+      - title: "Phương thức 3: Xét tuyển dựa vào kết quả kỳ thi THPT năm 2021"
+        payload: "/pt3"
+      - title: "Thoát"
+        payload: "/thanks"  
+  utter_ask_tuition_money:
+  - text: "Bạn có thể truy cập link dưới đây để biết thêm chi tiết thông tin học phí nhé: http://www.tlu.edu.vn/hoc-phi/quyet-dinh-ve-muc-thu-hoc-phi-ap-dung-13323"
+  utter_ask_infor_uni:
+  - text: "Mời bạn click đường link trang Facebook của trường: https://www.facebook.com/daihocthuyloi1959/ "
+  - text: "Mời bạn truy cập Website: http://www.tlu.edu.vn/ để biết thêm chi tiết !"
+  utter_ask_yes:
+  - text: "Đại học Thủy Lợi có bạn nhé"
+  utter_ask_no:
+  - text: "Đại học Thủy Lợi không bạn nhé"
+  utter_pt1:
+  - text: "Phương thức 1: Xét tuyển thẳng, không vượt quá 10% tổng chỉ tiêu Tuyển thẳng vào tất cả các ngành theo thứ tự ưu tiên từ đối tượng 1 đến đối tượng 5.
+          - Đối tượng 1: Những thí sinh thuộc các đối tượng xét tuyển thẳng theo quy định trong Quy chế tuyển sinh của Bộ Giáo dục và Đào tạo;
+          - Đối tượng 2: Thí sinh đạt giải nhất, nhì, ba, khuyến khích tại các kỳ thi học sinh giỏi cấp Tỉnh/Thành phố một trong các môn thuộc tổ hợp xét tuyển của Nhà trường hoặc đạt giải nhất, nhì, ba, khuyến khích tại kỳ thi khoa học kỹ thuật cấp Tỉnh/Thành phố;
+          - Đối tượng 3: Thí sinh học tại các trường chuyên;
+          - Đối tượng 4: Thí sinh có học lực loại giỏi 3 năm lớp 10, 11, 12;
+          - Đối tượng 5: Thí sinh có học lực loại khá trở lên năm lớp 12, đạt chứng chỉ Tiếng Anh từ 5.0 IELTS hoặc tương đương trở lên."
+
+  utter_pt2:
+  - text: "Phương thức 2: Xét tuyển dựa trên kết quả học bạ, không vượt quá 30% tổng chỉ tiêu
+          - Xét tuyển dựa vào tổng điểm trung bình 03 năm các môn trong tổ hợp xét tuyển.
+          - Ngưỡng nhận hồ sơ:
+          ▪ Các ngành thuộc nhóm ngành Công nghệ thông tin có tổng điểm đạt từ 21,0
+          ▪ Ngành Kỹ thuật điện, Kỹ thuật điều khiển và tự động hóa có tổng điểm đạt từ 19,0;
+          ▪ Các ngành khác tổng điểm đạt từ 18,0.
+          - Trong trường hợp nhiều thí sinh đạt cùng ngưỡng điểm thì thứ tự ưu tiên là môn Toán.
+          - Cách tính Điểm xét tuyển (ĐXT) ĐXT = (M1 + M2 + M3 + ĐƯT) Mi = (TBi_lớp 10 + TBi_lớp 11 + TBi_lớp 12)/3
+          Trong đó: i=1-3, là số môn trong tổ hợp xét tuyển; TBi: Điểm TB năm môn i; Mi: Điểm trung bình 3 năm môn i; ĐXT: Điểm xét tuyển; ĐƯT: Điểm ưu tiên.
+          => Mẫu phiếu đăng ký xét tuyển học bạ xem TẠI ĐÂY
+          => Mẫu đơn xin xác nhận kết quả hoc tâp xem TẠI ĐÂY"
+
+  utter_pt3:
+  - text: "Phương thức 3: Xét tuyển dựa vào kết quả kỳ thi THPT năm 2021, từ 70% tổng chỉ tiêu
+          - Điểm chuẩn trúng tuyển theo các tổ hợp môn xét tuyển là như nhau; - Có điểm trúng tuyển theo ngành, theo cơ sở đào tạo;
+          - Thí sinh có điểm tổng các môn thi thuộc kỳ thi tốt nghiệp THPT năm 2021 của tổ hợp xét tuyển đạt ngưỡng đảm bảo chất lượng của Nhà trường, được xét từ cao xuống thấp đến đủ chỉ tiêu theo quy định. Trường hợp số thí sinh bằng điểm nhau nhiều hơn chỉ tiêu thì xét ưu tiên điểm môn Toán;
+          - Xét tuyển theo các nguyện vọng của thí sinh đã đăng ký (xếp theo thứ tự ưu tiên trên Phiếu ĐKXT): Nếu thí sinh đã trúng tuyển theo nguyện vọng xếp trên thì sẽ không được xét các nguyện vọng tiếp theo.
+           Điểm chuẩn trúng tuyển vào một ngành chỉ căn cứ trên kết quả điểm xét của thí sinh và chỉ tiêu, vị trí các nguyện vọng của các thí sinh có giá trị như nhau."
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+actions:
+  - action_submit_results
+  - action_custom_diem_chuan
+  - action_custom_chi_tieu
+  - action_custom_ma_nganh
+  - action_custom_to_hop_mon
+  - action_custom_mo_ta_nganh
+  - action_custom_nganh_hoc

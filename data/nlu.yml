@@ -1,0 +1,729 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - Hello
+    - hey
+    - hello
+    - hi
+    - Xin chào
+    - Chào
+    - Cho em hỏi
+    - xin chào
+    - chào bạn
+    - mình có vài câu hỏi
+    - có ai giúp mình không
+    - bạn ơi
+    - anh ơi
+    - chị ơi
+    - Có ai ở đây không
+    - Em chào cô
+    - Em chào thầy
+    - Em chào ad
+    - Ad ơi cho em hỏi
+
+- intent: give_name
+  examples: |
+    - [Kiên](cust_name)
+    - [Chí Kiên](cust_name)
+    - [Tâm](cust_name)
+    - [Phong](cust_name)
+    - [Hải](cust_name)
+    - [Chiểu](cust_name)
+    - [Chieu](cust_name)
+    - [Đỗ Văn Hải](cust_name)
+    - [Do Van Hai](cust_name)
+    - [Ngô Đức Tâm](cust_name)
+    - [Nguyễn Đức Kiên](cust_name)
+    - [Phạm Quang Dương](cust_name)
+    - [Tớ](cust_sex) là [Trương Ngọc Ánh](cust_name)
+    - [Tớ](cust_sex) là [Nguyễn Hoài Phương](cust_name)
+    - [Tớ](cust_sex) là [Nguyễn Nhật Anh](cust_name)
+    - [Tớ](cust_sex) là [Tân](cust_name)
+    - [Tớ](cust_sex) tên [Hoàng Thái](cust_name)
+    - [Tớ](cust_sex) tên [Vi Diệu](cust_name)
+    - [Tớ](cust_sex) tên [Bùi Nguyên Đán](cust_name)
+    - [Tớ](cust_sex) tên [Nguyễn Văn Mạnh](cust_name) 
+    - Em chào add [Em](cust_sex) tên [Phạm Thế Huy](cust_name)
+    - [Em](cust_sex) là [Nguyễn Việt Hùng](cust_name)
+    - Em chào cô [Em](cust_sex) là [Liên Xạ](cust_name)
+    - Em chào cô [Em](cust_sex) là [Nguyễn Duy Hải](cust_name)
+    - [Em](cust_sex) là [Huệ](cust_name)
+    - [Em](cust_sex) tên [Hường](cust_name)
+    - [Em](cust_sex) tên [Đức Hiếu](cust_name)
+    - Em chào chị [Em](cust_sex) tên [Nguyễn Chương Đức](cust_name)
+    - [Mình](cust_sex) là [Đặng Thu Phương](cust_name)
+    - [Mình](cust_sex) là [Chu Tiến Dũng](cust_name)
+    - [Mình](cust_sex) tên [Tâm Tí Tởn](cust_name) 
+    - [Mình](cust_sex) là [Bùi Thế Dũng](cust_name) 
+    - [Cô](cust_sex) là [Hiền](cust_name) 
+    - [Chu](cust_sex) là [Huệ](cust_name) 
+    - Tên [tôi](cust_sex) là [Linh](cust_name) 
+    - Tên [tôi](cust_sex) là [Dương Giáp Đức](cust_name)
+    - Tên [tôi](cust_sex) là [Việt Linh](cust_name)
+    - Tên [mình](cust_sex) là [Việt Trì](cust_name)
+    - Tên [mình](cust_sex) là [Hoàng Thị Thu Quyên](cust_name)
+    - Tên [mình](cust_sex) là [Việt](cust_name)
+    - [Cháu](cust_sex) là [Hoa](cust_name) 
+    - [Tôi](cust_sex) tên [Tú](cust_name) 
+    - [Mình](cust_sex) là [Chu Hoàng Đăng](cust_name)
+    - [Mình](cust_sex) tên [Đặng Lan](cust_name) 
+    - [Tôi](cust_sex) tên [Tú](cust_name)
+    - [Tôi](cust_sex) tên [Nguyễn Tú Anh](cust_name)
+    - Tên [em] là [Vũ Huy Hoàng](cust_name)
+    - Tên [mình] là [Giang Vân Nam](cust_name)
+    - Tên [em] là [Minh Hùng](cust_name)
+    - Tên [tớ] là [Hoàng Thị Thu Quyên](cust_name)
+    - Tên [em] là [Vũ Huy Hoàng](cust_name)
+    - [Bảo Bảo](cust_name)
+    - [Hà Linh](cust_name)
+    - [Ha](cust_sex) [Linh](cust_name)
+    - [Bao](cust_sex) [Bao](cust_name)
+
+    
+- intent: thongtin
+  examples: |
+    - Gmail và số điện thoại
+    - gmail va so dien thoai
+    - Số điện thoại và gmail
+    - So dien thoai va gmail
+
+- intent: luu_thongtin
+  examples: |
+    - [0766366726](thongtin) [tamdz72@wru.vn](thongtin)
+    - [0123456789](thongtin)
+    - Đây là số điện thoại của mình [0245786543](thongtin) và gmail của mình [kiendz@outlook.com](thongtin)
+    - gmail cua minh day a [tamdz72@wru.vn](thongtin)
+    - Day a [ngoductam@gmail.com va 0123456789](thongtin) 
+    - [0123456789 và ductam@tlu.edu.vn](thongtin) 
+    - [kiendz@outlook.com](thongtin)
+    - [chikien2412@mail.com](thongtin)
+
+- intent: cauhoituvanvien
+  examples: |
+    - [Trường Thủy Lợi có gì vui](cauhoi)
+    - [Trường Thủy Lợi đào tạo thế nào, tỉ lệ sinh viên ra trường có việc làm nhiều không](cauhoi)
+    - [Tỷ lệ sinh viên không ra được trường](cauhoi)
+    - [Tỷ lệ sinh viên ra trường không đúng hạn là bao nhiêu](cauhoi)
+    - [Làm sao để đỗ vào trường TL](cauhoi)
+    - [Em thich hoc toan, em nen chon nganh nao](cauhoi)
+    - [em khong hoc mon boi thi co ra truong duoc khong](cauhoi)
+    - [em yeu truong](cauhoi)
+    - Ngành [Công nghệ thông tin](nganh) và ngành [Kỹ thuật phần mềm](nganh) khác gì nhau
+    - Ngành [Công nghệ thông tin](nganh) và ngành [Hệ thống thông tin](nganh) khác gì nhau
+    - Điểm chuẩn 2021 thế nào nhỉ
+    - Trường Thủy Lợi có gì vui
+    - Trường Thủy Lợi đào tạo thế nào, tỉ lệ sinh viên ra trường có việc làm nhiều không
+    - Tỷ lệ sinh viên không ra được trường 
+    - Tỷ lệ sinh viên ra trường không đúng hạn là bao nhiêu
+    - Làm sao để đỗ vào trường TL
+    - Em học giỏi môn Toán em có thể [lựa chọn](nen) ngành nào?
+    - Em học giỏi môn Văn em có thể [lựa chọn](nen) ngành [Công nghệ thông tin](nganh) được không?
+    - Em không biết mình [phù hợp](nen) ngành nào?
+    - Em đang [phân vân](nen) không biết [nên chọn](nen) ngành nào?
+    - Mình học giỏi môn Toán em có thể [lựa chọn](nen) ngành nào?
+    - Mình học giỏi môn Văn em có thể [lựa chọn](nen) ngành [Công nghệ thông tin](nganh) được không?
+    - Mình không biết mình [phù hợp](nen) ngành nào?
+    - Mình đang [phân vân](nen) không biết [nên chọn](nen) ngành nào?
+    - Ae ơi cho em hỏi điểm học bạ của em tầm 22,3đ thì [lên](nen) theo ngành j của trường với ạ
+    - Điểm học bạ em tầm 21,05 [nên](nen) xét ngành nào đc ạ mn
+    - [Điểm học bạ](pt2) của em khoảng 24.5 có đỗ được vào khoa [cntt](nganh) không ạ
+    - Cho em hỏi là [học bạ](pt2) em tầm hơn 23,5 thì có đỗ được [QTKD](nganh) vs [kế toán](nganh) ko ạ em hơi hoang mang
+    - Cho em hỏi [học bạ](pt2) 5 kì 20,4 có hi vọng vào học bạ được không
+    - Mng cho e hỏi điểm [học bạ](pt2) e 6 kì tầm 21.4 thì liệu có đỗ được kỹ thuật ô tô k ạ
+
+- intent: ma_nganh
+  examples: |
+    - [Mã ngành](ma) thì sao?
+    - [Mã ngành](ma) [Kỹ thuật Robot](nganh) là gì?
+    - [ma nganh](ma) [Ky thuat Robot](nganh) la gi?
+    - [Hệ thống thông tin](nganh) [mã](ma)
+    - Ngành [Thủy văn học](nganh) [mã](ma)
+    - [Kinh tế](nganh) [mã](ma)
+    - [cntt](nganh) [mã](ma)
+    - năm [2020](nam) có [mã](ma) là
+    - [mã](ma) ngành [Ngôn ngữ Anh](nganh) 
+    - [ma](ma) [Ky thuat phan mem](nganh) la gi?
+    - Nganh [He thong thong tin](nganh) co [ma](ma) là? 
+    - [Tai nguyen nuoc](nganh) [ma nganh](ma) la gi
+    - nganh [Ky thuat co dien tu](nganh) [ma](ma) la gi
+    - [Mã ngành](ma) [Kỹ thuật xây dựng công trình thủy](nganh) là gì?
+    - [ma nganh](ma) [Ky thuat xay dung cong trinh thuy](nganh) la gi?
+    - Cho mình hỏi [mã ngành](ma) [Kỹ thuật xây dựng](nganh) là gì?
+    - Cho minh hoi [ma nganh](ma) [Ky thuat xay dung](nganh) la gi?
+    - Ngành [Công nghệ kỹ thuật xây dựng](nganh) có [mã ngành](ma)  là gì?
+    - Nganh [Cong nghe ky thuat xay dung](nganh) co [ma nganh](ma) la gi?
+    - [Mã ngành](ma) [Kỹ thuật xây dựng công trình giao thông](nganh)  trường TL năm [2020](nam) là gì?
+    - [Ma nganh](ma) [Ky thuat xay dung cong trinh giao thong](nganh) truong TL năm [2020](nam) la gi?
+    - Ngành [Kỹ thuật tài nguyên nước](nganh) trường mình có [mã ngành](ma) là gì?
+    - Nganh [Ky thuat tai nguyen nuoc](nganh) truong minh co [ma nganh](ma) la gi?
+    - Cho em hỏi [mã ngành](ma) [Kỹ thuật cấp thoát nước](nganh) là gì?
+    - Cho em hoi [ma nganh](ma) [Ky thuat cap thoat nuoc](nganh) la gi?
+    - Tôi muốn biết [mã](ma) ngành [Kỹ thuật cơ sở hạ tầng](nganh) là gì?
+    - Toi muon biet [ma](ma) nganh [Ky thuat co so ha tang](nganh) la gi?
+    - Mình muốn hỏi [mã ngành](ma) [Thủy văn học](nganh) là gì?
+    - Minh muon hoi [ma nganh](ma) [Thuy van hoc](nganh) la gi?
+    - Admin trả lời giúp mình [mã ngành](ma) [Kỹ thuật môi trường](nganh) là gì?
+    - Admin tra loi giup minh [ma nganh](ma) [Ky thuat moi truong](nganh) la gi?
+    - Em muốn hỏi ngành [Kỹ thuật hóa học](nganh) có [mã ngành](ma) năm [2020](nam) là gì?
+    - Em muon hoi nganh [Ky thuat hoa hoc](nganh) co [ma nganh](ma) năm [2020](nam) la gi?
+    - Mình muốn hỏi ngành [Kỹ thuật hóa học](nganh) có [mã ngành](ma) năm [2020](nam) là gì?
+    - Mình muon hoi nganh [Ky thuat hoa hoc](nganh) co [ma nganh](ma) năm [2020](nam) la gi?
+    - Ngành [Công nghê sinh học](nganh) trường mình có [mã ngành](ma) là gì?
+    - Nganh [Cong nghe sinh hoc](nganh) truong minh co [ma nganh](ma) la gi?
+    - Năm [2020](nam) ngành [Công nghệ thông tin](nganh) có [mã ngành](ma) là gì vậy admin?
+    - Nam [nam nay](nam) nganh [Cong nghe thong tin](nganh) co [ma nganh](ma) la gi vay admin?
+    - [Mã ngành](ma) [Kỹ thuật phần mềm](nganh) của trường mình năm [2020](nam) là gì?
+    - [Ma nganh](ma) [Ky thuat phan mem](nganh) cua truong minh la gi?
+    - Xin hỏi ngành [Hệ thống thông tin](nganh) có [mã ngành](ma) năm [2020](nam) là gì?
+    - Xin hoi nganh [He thong thong tin](nganh) co [ma nganh](ma) la gi?
+    - Cho hỏi [mã ngành](ma) [Kỹ thuật cơ khí](nganh) năm [2021](nam) là gì?
+    - Cho hoi [ma nganh](ma) [Ky thuat co khi](nganh) la gi?
+    - Admin [mã](ma) ngành [Kỹ thuật ô to](nganh) là gì?
+    - Admin [ma](ma) nganh [Ky thuat o to](nganh) la gi?
+    - Cho tôi hỏi [mã của ngành](ma) [Kỹ thuật cơ điện tử](nganh) là gì?
+    - Cho toi hoi [ma cua nganh](ma) [Ky thuat co dien tu](nganh) la gi?
+    - Admin ơi ngành [Kỹ thuật điện](nganh) có [mã ngành](ma) là gì?
+    - Admin oi nganh [Ky thuat dien](nganh) co [ma nganh](ma) la gi?
+    - Trường Thủy Lợi có [mã ngành](ma) [Kỹ thuật điều khiển và tự động hóa](nganh) là gì?
+    - Truong minh co [ma nganh](ma) [Ky thuat dieu khien va tu dong hoa](nganh) la gi?
+    - Trường Thủy Lợi ngành [Quản lý xây dựng](nganh) có [mã ngành](ma) năm [2020](nam) là gì thế Ad?
+    - Truong Thuy Loi nganh [Quan ly xay dung](nganh) co [ma nganh](ma) la gi the Ad?
+    - Cho mình biết [mã ngành](ma) [Kinh tế](nganh) là gì?
+    - Cho minh biet [ma nganh](ma) [Kinh te](nganh) la gi?
+    - Cho mình biết trường mình có [mã ngành](ma) [Quản trị kinh doanh](nganh) năm [2021](nam) là gì?
+    - Cho minh biet truong Thuy Loi co [ma nganh](ma) [Quan tri kinh doanh](nganh) la gi?
+    - Mình xin thông tin về [mã ngành](ma) [Kế toán](nganh) năm [2020](nam) là gì?
+    - Minh xin thong tin ve [ma nganh](ma) [Ke toan](nganh) la gi?
+    - Em cần biết thông tin về [mã ngành](ma) [Chương trình tiên tiến ngành kỹ thuật xây dưng](nganh) năm [2020](nam) là gì?
+    - Em can biet thong tin ve [ma nganh](ma) [Chuong trinh tien tien nganh ky thuat xay dung](nganh) la gi?
+    - [Mã ngành](ma) của ngành [Chương trình tiên tiến ngành kỹ thuật tài nguyên nước](nganh) năm [2020](nam) là gì?
+    - [Ma nganh](ma) cua nganh [Chuong trinh tien tien nganh ky thuat tai nguyen nuoc](nganh) la gi?
+    - Cho tôi hỏi ngành mới [Trí tuệ nhân tạo và khoa học dữ liệu](nganh) có [mã ngành](ma) năm [2020](nam) là gì?
+    - Cho toi hoi nganh moi [Tri tue nhan tao va khoa hoc du lieu](nganh) co [ma nganh](ma) la gi?
+    - Thế còn ngành [Kỹ thuật điện tử - viễn thông](nganh) có [mã ngành](ma) là gì?
+    - Vay thi con nganh [Ky thuat dien tu - vien thong](nganh) co [ma nganh](ma) la gi?
+    - Thông tin [mã ngành](ma) [Quản lý xây dựng](nganh) là gì ạ?
+    - Thong tin [ma nganh](ma) [Quan ly xay dung](nganh) la gi a?
+    - Cho hỏi ngành [Kinh tế xây dựng](nganh) có [mã ngành](ma) năm [2020](nam) là gì?
+    - Cho hoi nganh [Kinh te xay dung](nganh) co [ma nganh](ma) la gi?
+    - [Mã](ma) xét tuyển ngành [Thương mại điện tử](nganh) là gì?
+    - [Ma](ma) xet tuyen nganh [Thuong mai dien tu](nganh) năm [2020](nam) la gi?
+    - Ngành [Quản trị dịch vụ và du lịch và lữ hành](nganh)  có [mã ngành](ma) xét tuyển năm [2020](nam) là gì?
+    - Nganh [Quan tri dich vu va du lich va lu hanh](nganh) co [ma nganh](ma) xet tuyen la gi?
+    - [Mã ngành](ma) [Logistics và quản lý chuỗi cung ứng](nganh) của trường TL là gì?
+    - [Ma nganh](ma) [Logistics va quan ly chuoi cung ung](nganh) cua truong minh la gi?
+    - Em muốn hỏi thông tin về [Mã ngành](ma) [Ngôn ngữ anh](nganh) của trường mình là gì ạ?
+    - Em muon hoi thong tin ve [Ma nganh](ma) [Ngon ngu anh](nganh) cua truong TL la gi a ?
+    - Mình muốn hỏi thông tin về [Mã ngành](ma) [Ngôn ngữ anh](nganh) của trường mình là gì ạ?
+    - Mình muon hoi thong tin ve [Ma nganh](ma) [Ngon ngu anh](nganh) cua truong TL la gi a ?
+
+- intent: to_hop_mon
+  examples: |
+    - [To hop mon](tohopmon)
+    - [To hop mon](tohopmon) thì sao
+    - Ngành [Kỹ thuật xây dựng](nganh) như nào ạ
+    - [to hop mon](tohopmon) [Kỹ thuật xây dựng công trình thủy](nganh)
+    - [To hop mon](tohopmon) năm [2020](nam)
+    - [Kỹ thuật xây dựng công trình thủy](nganh) có [tổ hợp môn](tohopmon) là gì?
+    - [Tài nguyên nước](nganh) có [tổ hợp môn](tohopmon)  là gì?
+    - năm [2021](nam) [Kỹ thuật tài nguyên nước](nganh) có [tổ hợp môn](tohopmon) là gì?
+    - [Thủy văn học](nganh) có [tổ hợp môn](tohopmon) là gì?
+    - năm [2020](nam) ngành [Kỹ thuật xây dựng công trình thủy](nganh) là gì?
+    - [to hop mon](tohopmon) nganh [Ky thuat xay dung cong trinh thuy](nganh) la gi?
+    - Ngành [Kỹ thuật xây dựng](nganh) có [tổ hợp môn](tohopmon) là gì?
+    - Nganh [Ky thuat xay dung](nganh) co [to hop mon](tohopmon) la gi?
+    - [Tổ hợp môn](tohopmon) [Công nghệ kỹ thuật xây dựng](nganh)
+    - [To hop mon](tohopmon) [cong nghe ky thuat xay dung](nganh)
+    - Ngành [Công nghệ kỹ thuật xây dựng](nganh) có [tổ hợp môn](tohopmon) năm [2021](nam) là gì?
+    - [Công nghệ kỹ thuật xây dưng](nganh) [tổ hợp môn](tohopmon) 
+    - [Cong nghe ky thuat xay dung](nganh) [to hop mon](tohopmon)
+    - Cho mình hỏi là [tổ hợp môn](tohopmon) ngành [Kỹ thuật xây dựng công trình giao thông](nganh) năm [2020](nam) là gì?
+    - Cho minh hoi [to hop mon](tohopmon) nganh [Ky thuat xay dung cong trinh giao thong](nganh) la gi?
+    - Cho mình hỏi ngành [kỹ thuật cơ sở hạ tầng](nganh) có [tổ hợp môn](tohopmon) năm [2021](nam) là gì?
+    - Cho minh hoi nganh [ky thuat co so ha tang](nganh) co [to hop mon](tohopmon) la gi?
+    - [Tổ hợp môn](tohopmon) của ngành [Kỹ thuật tài nguyên nước](nganh) năm [2020](nam) là gì?
+    - [To hop mon](tohopmon) cua nganh [Ky thuat tai nguyen nuoc](nganh) la gi?
+    - Trả lời giúp mình ngành [Kỹ thuật cấp thoát nước](nganh) có [tổ hợp môn](tohopmon) là gì?
+    - Tra loi giup minh nganh [ky thuat cap thoat nuoc](nganh) co [to hop mon](tohopmon) la gi?
+    - Trả lời giúp mình [tổ hợp môn](tohopmon) ngành [thủy văn học](nganh) là gì?
+    - Tra loi giup minh [to hop mon](tohopmon) nganh [thuy van hoc](nganh) la gi?
+    - Cho em hỏi ngành [Kỹ thuật môi trường](nganh) của trường mình có  [tổ hợp môn](tohopmon) là gì?
+    - Cho em hoi nganh [Ky thuat moi truong](nganh) cua truong minh co [to hop mon](tohopmon) la gi?
+    - Ngành [kỹ thuật hóa học](nganh) của trường mình có [tổ hợp môn](tohopmon) là gì?
+    - Nganh [Ky thuat hoa hoc](nganh) cua truong minh co [to hop mon](tohopmon) năm [2020](nam) la gi?
+    - Tôi muốn biết [tổ hợp môn](tohopmon) ngành [công nghệ sinh học](nganh) là gì?
+    - Toi muon biet [to hop mon](tohopmon) nganh [cong nghe sinh hoc](nganh) la gi?
+    - Xin hỏi ngành [công nghệ thông tin](nganh) có [tổ hợp môn](tohopmon) là gì?
+    - Xin hoi nganh [cong nghe thong tin](nganh) co [to hop mon](tohopmon) la gi?
+    - Admin cho em hỏi ngành [kỹ thuật phần mềm](nganh) của trường Thủy Lợi có [tổ hợp môn](tohopmon) là gì? 
+    - Admin cho em hoi nganh [ky thuat phan mem](nganh) cua truong TL co [to hop mon](tohopmon) la gi?
+    - Ad cho mình hỏi năm [2020](nam) [tổ hợp môn](tohopmon) của ngành [hệ thống thông tin](nganh) là gì?
+    - Ad cho minh hoi [to hop mon](tohopmon) cua nganh [he thong thong tin](nganh) la gi?
+    - Cho mình xin thông tin về [tổ hợp môn](tohopmon) của ngành [kỹ thuật cơ khí](nganh) năm [2020](nam)
+    - Cho minh xin thong tin ve [to hop mon](tohopmon) cua nganh [ky thuat co khi](nganh) 
+    - Cho tôi hỏi [tổ hợp môn](tohopmon) của ngành [kỹ thuật ô tô](nganh) là gì?
+    - Cho toi hoi [to hop mon](tohopmon) cua nganh [ky thuat o to](nganh) la gi?
+    - Cho tôi hỏi ngành [kỹ thuật cơ điện tử](nganh) trường mình có [tổ hợp môn](tohopmon) là gì?
+    - Cho toi hoi nganh [ky thuat co dien tu](nganh) truong minh co [to hop mon](tohopmon) la gi?
+    - Trường mình đào tạo ngành [kỹ thuật điện](nganh) có [tổ hợp môn](tohopmon) là gì?
+    - Truong minh dao tao nganh [ky thuat dien](nganh) co [to hop mon](tohopmon) la gi?
+    - rường đại học Thủy Lợi đào tạo ngành [kỹ thuật điều khiển và tự đông hóa](nganh) có tổ hợp môn](tohopmon) là gì?
+    - Truong dai hoc Thuy Loi dao tao nganh [ky thuat dieu khien va tu dong hoa](nganh) co [to hop mon](tohopmon) la gi?
+    - Admin cho em xin thông tin về [tổ hợp môn](tohopmon) ngành [quản lý xây dựng](nganh) trường TL
+    - Admin cho em xin thong tin ve [to hop mon](tohopmon) nganh [quan ly xay dung](nganh) truong TL
+    - Cho hỏi [tổ hợp môn](tohopmon) ngành [kinh tế](nganh) là gì?
+    - Cho hoi [to hop mon](tohopmon) nganh [kinh te](nganh) la gi?
+    - Cho hỏi ngành [quản trị kinh doanh](nganh) có [tổ hợp môn](tohopmon) năm [2020](nam) là gì?
+    - Cho hoi nganh [quan tri kinh doanh](nganh) co [to hop mon](tohopmon) la gi?
+    - Cho hỏi [tổ hợp môn](tohopmon) ngành [kế toán](nganh) là gì?
+    - cho hoi [To hop mon](tohopmon) nganh [ke toan](nganh) la gi?
+    - Admin ơi [tổ hợp môn](tohopmon) ngành [chương trình tiên tiến ngành kỹ thuật xây dựng](nganh) là gì thế ạ?
+    - Admin oi [To hop mon](tohopmon) nganh [chuong trinh tien tien nganh ky thuat xay dung](nganh) la gi the a ?
+    - [Chương trình tiên tiến ngành kỹ thuật tài nguyên nước](nganh) có [tổ hợp môn](tohopmon) là gì vậy ạ?
+    - [chuong trinh tien tien nganh ky thuat tai nguyen nuoc](nganh) [to hop mon](tohopmon) la gi vay a?
+    - Em muốn biết [tổ hợp môn](tohopmon) ngành [trí tuệ nhân tạo và khoa học dữ liệu](nganh) của trường mình là gì ạ?
+    - Em muon biet [To hop mon](tohopmon) nganh [tri tue nhan tao va khoa hoc du lieu](nganh) cua truong minh la gi a?
+    - Em muốn hỏi ngành [kỹ thuật điện tử - viễn thông](nganh) có [tổ hợp môn](tohopmon) là gì?
+    - Em muon hoi nganh [ky thuat dien tu - vien thong](nganh) co [to hop mon](tohopmon) năm [2020](nam) la gi ạ?
+    - [Tổ hợp môn](tohopmon) ngành [quản lý xây dưng](nganh)  năm [2020](nam) là gì?
+    - [To hop mon](tohopmon) nganh [quan ly xay dung](nganh) la gi?
+    - Ngành [kinh tế xây dựng](nganh) năm [2021](nam) có [tổ hợp môn](tohopmon) là gì thế ạ?
+    - Nganh [kinh te xay dung](nganh) co [to hop mon](tohopmon) la gi the a?
+    - Cho biết [tổ hợp môn](tohopmon) ngành [thương mại điện tử](nganh) trường mình là gì?
+    - Cho biet [to hop mon](tohopmon) nganh [thuong mai dien tu](nganh) truong minh la gi?
+    - Trường Thủy Lợi có [tổ hợp môn](tohopmon) ngành [quản trị dịch vụ và du lịch và lữ hành](nganh) là gì?
+    - Truong minh co [To hop mon](tohopmon) nganh [quan tri dich vu va du lich va lu hanh](nganh) la gi?
+    - [Tổ hợp môn](tohopmon) của ngành [logistics va quản lý chuỗi cung ứng](nganh) trường minh là năm [2020](nam) gì?
+    - [To hop mon](tohopmon) cua nganh [logistic va quan ly chuoi cung ung](nganh) truong minh la gi?
+    - [Tổ hợp môn](tohopmon) xét tuyển ngành [ngôn ngữ anh](nganh) của trường TL là gì?
+    - [To hop mon](tohopmon) xet tuyen nganh [ngon ngu anh](nganh) cua truong thuy Loi la gi?
+    - Ngành [kỹ thuật robot](nganh) có [tổ hợp môn](tohopmon) xét tuyển là gì?
+    - [To hop mon](tohopmon) xet tuyen la gi?
+    - [To hop mon](tohopmon) xet tuyen năm [2021](nam) la gi?
+    - [To hop mon](tohopmon) ngành [kỹ thuật robot](nganh)
+    - [Tổ hợp môn](tohopmon) xét tuyển ngành [Chương trình đào tạo chất lượng cao Việt Anh ngành Kế toán](nganh) là gì?
+    - [To hop mon](tohopmon) xet tuyen nganh [chuong trinh dao tao chat luong cao Viet Anh nganh ke toan](nganh) la gi?
+    - [Chương trình đào tạo chất lượng cao Việt Anh ngành Công nghệ thông tin](nganh) [tổ hợp môn](tohopmon) xét tuyển là
+    - [chuong trinh dao tao chat luong cao Viet Anh nganh cong nghe thong tin](nganh) [to hop mon](tohopmon) xet tuyen la
+
+- intent: chi_tieu
+  examples: |
+    - Em muốn hỏi [chỉ tiêu](so_luong) 
+    - Em muốn biết [chỉ tiêu](so_luong) [2020](nam)
+    - [Chỉ tiêu](so_luong) ngành [Kỹ thuật điện tử](nganh)
+    - [Chi tieu](so_luong) 
+    - Ngành [Kỹ thuật xây dưng công trình thủy](nganh) nữa ạ
+    - Ngành [Kỹ thuật xây dưng công trình thủy](nganh) có [chỉ tiêu](so_luong) năm [2020](nam) là?
+    - Nganh [Ky thuat xay dung cong trinh thuy](nganh) co [chi tieu](so_luong) nam [2020](nam) la?
+    - [Kỹ thuật tài nguyên nước](nganh) có [chỉ tiêu](so_luong) la?
+    - [Ky thuat tai nguyen nuoc](nganh) nam [2020](nam) co [chỉ tiêu](so luong) la?
+    - [Chỉ tiêu](so_luong) ngành [Ngôn ngữ anh](nganh) là?
+    - [Chi tieu](so_luong) nganh [Ngon ngu anh](nganh) nam [nam nay](nam) la?
+    - [Chỉ tiêu](so_luong) năm [2020](nam) của ngành [Kỹ thuật xây dưng](nganh) là?
+    - [Chi tieu](so_luong) nam [2020](nam) của nganh [Ky thuat xay dung](nganh) la?
+    - Năm [2020](nam) ngành [Công nghệ kỹ thuật xây dựng](nganh) có [chỉ tiêu](so_luong) là?
+    - Nam [2020](nam) nganh [Cong nghe ky thuat xay dung](nganh) co [chi tieu](so_luong) la?
+    - Cho em hỏi ngành [Kỹ thuật xây dựng công trình giao thông](nganh) có [chỉ tiêu](so_luong) năm [2020](nam) là?
+    - Cho em hoi nganh [Ky thuat xay dung cong trinh giao thong](nganh) co [chi tieu](so_luong) nam [2020](nam) la?
+    - Cho em xin [chỉ tiêu](so_luong) ngành [Kỹ thuật cấp thoát nước](nganh) năm [2020](nam) là?
+    - Cho em xin [chi tieu](so_luong) nganh [Ky thuat cap thoat nuoc](nganh) nam [2020](nam) la?
+    - Tôi muốn biết ngành [Kỹ thuật cơ sở hạ tầng](nganh) có [chỉ tiêu](so_luong) năm [2020](nam) là bao nhiêu?
+    - Toi muon biet nganh [Ky thuat co so ha tang](nganh) co [chi tieu](so_luong) nam [2020](nam) la bao nhieu?
+    - Ngành [Thủy văn học](nganh) của trường mình có [chỉ tiêu](so_luong) năm [2020](nam) là bao nhiêu?
+    - Nganh [Thuy van hoc](nganh) cua truong minh co [chi tieu](so_luong) nam [2020](nam) la bao nhieu?
+    - Em muốn hỏi năm [2020](nam) ngành [Kỹ thuật môi trường](nganh) có [chỉ tiêu](so_luong) là bao nhiêu?
+    - Em muốn hỏi nam [2020](nam) nganh [Ky thuat moi truong](nganh) co [chi tieu](so_luong) la bao nhieu?
+    - [Chỉ tiêu](so_luong) ngành [Kỹ thuật hóa học](nganh) của trường mình là?
+    - [Chi tieu](so_luong) nam [2020](nam) nganh [Ky thuat hoa hoc](nganh) cua truong minh la?
+    - Ngành [Công nghệ sinh học](nganh) [chỉ tiêu](so_luong) [2020](nam) là?
+    - Nganh [Cong nghe sinh hoc](nganh) [chi tieu](so_luong) [2020](nam) la?
+    - Em xin thông tin ngành [Công nghệ thông tin](nganh) có [chỉ tiêu](so_luong) năm [2020](nam) là?
+    - Em xin thong tin nganh [Cong nghe thong tin](nganh) co [chi tieu](so_luong) nam [2020](nam) la?
+    - [Ky thuat phan mem](nganh) [chi tieu](so_luong) 
+    - [Kỹ thuật phần mềm](nganh) [chỉ tiêu](so_luong) [2020](nam)
+    - [2020](nam) trường mình có [chỉ tiêu](so_luong) ngành [Hệ thống thông tin](nganh) là?
+    - [2020](nam) truong minh co [chi tieu](so_luong) nganh [He thong thong tin](nganh) la?
+    - Trường mình xét tuyển ngành [Kỹ thuật cơ khí](nganh) có [chỉ tiêu](so_luong) năm [2020](nam) là?
+    - Truong minh xet tuyen nganh [Ky thuat co khi](nganh) co [chi tieu](so_luong) nam [2020](nam) la?
+    - [2020](nam) [Kỹ thuật ô tô](nganh) [chỉ tiêu](so_luong) là?
+    - [2020](nam) [Ky thuat o to](nganh) [chi tieu](so_luong) la?
+    - Năm [2020](nam) [chỉ tiêu](so_luong) xét tuyển ngành [Kỹ thuật cơ điện tử](nganh) là?
+    - Nam [2020](nam) [chi tieu](so_luong) xet tuyen la? 
+    - [Chỉ tiêu](so_luong) [Kỹ thuật điện](nganh) [2020](nam) là?
+    - [Chi tieu](so_luong) [Ky thuat dien](nganh) la? 
+    - Cho tôi hỏi ngành [Kỹ thuật điều khiển và tự động hóa](nganh) của trường mình có [chỉ tiêu](so_luong) là?
+    - Cho toi hoi nganh [Ky thuat dieu khien va tu dong hoa](nganh) cua truong minh co [chi tieu](so_luong) nam [2020](nam) la?
+    - Cho em xin [chỉ tiêu](so_luong) của trường mình về ngành [Quản lý xây dựng](nganh) năm [2020](nam) là?
+    - Cho em xin [chi tieu](so_luong) cua truong minh ve nganh [Quan ly xay dung](nganh) nam [2020](nam) la?
+    - Tôi muốn biết năm [2021](nam) ngành [Kinh tế](nganh) có [chỉ tiêu](so_luong) là?
+    - Toi muon biet nam [2021](nam) nganh [Kinh te](nganh) co [chi tieu](so_luong) la?
+    - [Chỉ tiêu](so_luong) năm [2021](nam) là?
+    - [Chi tieu](so_luong) nam [2021](nam) ve nganh [Quan tri kinh doanh](nganh) la?
+    - Admin ơi ngành [Kế toán](nganh) có [chỉ tiêu](so_luong) năm [2021](nam) là?
+    - Admin oi nganh [Ke toan](nganh) co [chi tieu](so_luong) nam [2020](nam) la?
+    - Admin ơi năm [2020](nam) ngành [Chương trình tiên tiến ngành kỹ thuật xây dựng](nganh) có [chỉ tiêu](so_luong) là?
+    - Admin oi nam [2020](nam) nganh [Chuong trinh tien tien nganh ky thuat xay dung](nganh) co [chi tieu](so_luong) la?
+    - Mình muốn hỏi về thông tin [Chương trình tiên tiến ngành kỹ thuật tài nguyên nước](nganh) có [chỉ tiêu](so_luong) năm [2020](nam) là?
+    - Minh muon hoi ve thong tin [Chuong trinh tien tien nganh kỹ thuat tai nguyen nuoc](nganh) co [chi tieu](so_luong) nam [2020](nam) la?
+    - Ngành [Hệ thống thông tin](nganh) năm [2021](nam) của trường ta có [chỉ tiêu](so_luong) là?
+    - Nganh [He thong thong tin](nganh) nam [nam nay](nam) cua truong ta co [chi tieu](so_luong) la?
+    - Mình cần thông tin về ngành [Kỹ thuật phần mềm](nganh) có [chỉ tiêu](so_luong) năm [2021](nam) là?
+    - Minh can thong tin ve [chi tieu](so_luong) nam [2021](nam) la?
+    - Mình cần biết thông tin [chỉ tiêu](so_luong) ngành [Trí tuệ nhân tạo và khoa học dữ liệu](nganh) năm [2021](nam) là?
+    - Minh can biet thong tin [chi tieu](so_luong) nganh [Tri tue nhan tao va khoa hoc du lieu](nganh) nam [2021](nam) la?
+    - Thông tin [chỉ tiêu](so_luong) năm [2021](nam) ngành [Kỹ thuật điện tử - viễn thông](nganh) là?
+    - Thong tin [chi tieu](so_luong) nganh [Ky thuat dien tu - vien thong](nganh) la?
+    - Admin trả lời giúp mình ngành [Logistics và quản lý chuỗi cung ứng](nganh) có [chỉ tiêu](so_luong) năm [2021](nam) là?
+    - Admin tra loi giup minh nganh [Logistics va quan ly chuoi cung ung](nganh) co [chi tieu](so_luong) nam [2021](nam) la?
+    - Ngành [Quản trị dịch vụ và du lịch và lữ hành](nganh) có [chỉ tiêu](so_luong) năm [2021] là?
+    - [Quan tri dich vu va du lich va lu hanh](nganh) [2021](nam) [chi tieu](so_luong)
+    - [Quản trị dịch vụ và du lịch và lữ hành](nganh) [2021](nam) [chỉ tiêu](so luong)
+    - nam [2020](nam) nganh [Thuong mai dien tu](nganh) cua truong minh co [chi tieu](so_luong) la bao nhieu?
+    - năm [2021](nam) ngành [Thương mại điện tử](nganh) của trường mình có [chỉ tiêu](so luong) là bao nhiêu?
+    - [2021](nam) [Kinh te xay dung](nganh) [chi tieu](so_luong) 
+    - [Kinh tế xây dựng](nganh) [chỉ tiêu](so_luong)
+    
+
+- intent: diem_chuan
+  examples: |
+    - Em muốn hỏi [điểm chuẩn](diem) 
+    - Mình muốn hỏi [điểm chuẩn](diem) 
+    - Em muốn biết [điểm chuẩn](diem) [2020](nam)
+    - [điểm chuẩn](diem) 
+    - Ngành [Kỹ thuật xây dưng công trình thủy](nganh)
+    - Ngành [Kỹ thuật xây dưng công trình thủy](nganh) [2020](nam)
+    - Ngành [Kỹ thuật xây dưng công trình thủy](nganh) có [điểm chuẩn](diem) năm [2020](nam) là?
+    - Nganh [Ky thuat xay dung cong trinh thuy](nganh) co [diem chuan](diem) nam [nam ngoai](nam) la?
+    - [Công nghệ kỹ thuật xây dựng](nganh) [điểm chuẩn](diem) [2020](nam)
+    - [Cong nghe ky thuat xay dung](nganh) [diem chuan](diem) [2020](nam) 
+    - [Điểm chuẩn](diem) ngành [Kỹ thuật xây dựng công trình giao thông](nganh) năm [2020](nam) là?
+    - [Diem chuan](diem) nganh [Ky thuat xay dung cong trinh giao thong](nganh) nam [2020](nam) la?
+    - [điểm chuẩn](diem) [Kỹ thuật tài nguyên nước](nganh) [2020](nam)
+    - [diem chuan](diem) [ky thuat tai nguyen nuoc](nganh) [2020](nam) 
+    - Ngành [Kỹ thuật cấp thoát nước] năm [2020](nam) có [điểm chuẩn](diem) là bao nhiêu?
+    - Nganh [Ky thuat cap thoat nuoc] nam [2020](nam) co [diem chuan](diem) la bao nhieu?
+    - [Ky thuat co so ha tang](nganh) [2020](nam) [diem chuan](diem) 
+    - [Kỹ thuật cơ sở hạ tầng](nganh) [2020](nam) [điểm chuẩn](diem) 
+    - [điểm chuẩn](diem) năm [2021](nam) của ngành [Thủy văn học](nganh) là bao nhiêu?
+    - [diem chuan](diem) nam [2020](nam) cua nganh [Thuy van hoc](nganh) la bao nhieu?
+    - [diem chuan](diem) [2020](nam) [Ky thuat moi truong](nganh) 
+    - [điểm chuẩn](diem) [2020](nam) [Kỹ thuật môi trường](nganh)
+    - năm [2020](nam) ngành [Kỹ thuật hóa học](nganh) có [điểm chuẩn](diem) là bao nhiêu?
+    - nam [2020](nam) nganh [Ky thuat hoa hoc](nganh) co [diem chuan](diem) la bao nhieu?
+    - [2020](nam) [Công nghệ sinh học](nganh) [điểm chuẩn](diem)
+    - [2020](nam) [Cong nghe sinh hoc](nganh) [diem chuan](diem)
+    - năm [2020](nam) [điểm chuẩn](diem) của ngành [Công nghệ thông tin](nganh) la bao nhiêu?
+    - nam [2020](nam) [diem chuan](diem) cua nganh [Cong nghe thong tin](nganh) la bao nhieu?
+    - [điểm chuẩn](diem) [Kỹ thuật phần mềm](nganh) 
+    - [2020](nam) [diem chuan](diem) [Ky thuat phan mem](nganh)
+    - Cho em hỏi ngành [Hệ thống thông tin] của trường mình có [điểm chuẩn](diem) năm [2020](nam) là bao nhiêu ạ?
+    - cho em hoi nganh [He thong thong tin](nganh) cua truong minh co [diem chuan](diem) nam [2020](nam) la bao nhieu a?
+    - Cho minh hoi nganh [Ky thuat phan mem](nganh) nam [2020](nam) co [diem chuan](diem) la bao nhieu?
+    - Cho mình hỏi ngành [Kỹ thuật phần mềm](nganh) năm [2020](nam)
+    - Tôi muốn biết [điểm chuẩn](diem) của ngành [Kỹ thuật cơ khí](nganh) năm [2020](nam) là boa nhiêu?
+    - Toi muon biet [diem chuan](diem) cua nganh [Ky thuat co khi](nganh) la bao nhieu?
+    - Ad cho mình hỏi [điểm đầu vào](diem) năm [2020](nam) của ngành [Kỹ thuật ô to](nganh) là
+    - ad cho minh hoi [diem dau vao](diem) nam [2020](nam) 
+    - Cho hỏi năm [2020](nam) ngành [Kỹ thuật cơ điện tử](nganh) có [điểm chuẩn](diem) là bao nhiêu ?
+    - Ad giúp mình xem thông tin năm [2020](nam) ngành [Kỹ thuật điện](nganh) lấy [điểm đầu vào](diem) là bao nhiêu?
+    - Ad giup minh xem thong tin nam [2020](nam) nganh [Ky thuat dien](nganh) lay [diem dau vao](diem) la bao nhieu?
+    - Tôi muốn biết năm [2020](nam) có [điểm chuẩn](diem) ngành [Kỹ thuật điều khiển và tự động hóa](nganh) là
+    - Toi muon biet nam [2020](nam) co [diem chuan](diem) nganh [Ky thuat dieu khien va tu dong hoa](nganh) la
+    - Ngành [Quản lý xây dựng](nganh) có [điểm đầu vào](diem) năm [2020](nam) là?
+    - Nganh [Quan ly xay dung](nganh) co [diem dau vao](diem) nam [2020](nam) la?
+    - [Kinh tế](nganh) [điểm đầu vào](diem) [2020](nam)
+    - [Kinh te](nganh) [diem dau vao](diem) [2020](nam)
+    - Ngành [Quản trị kinh doanh](nganh) năm [2020](nam) có [điểm trúng tuyển](diem) là?
+    - Nganh [Quan tri kinh doanh](nganh) nam [2020](nam) co [diem trung tuyen](diem) la?
+    - [Kế toán](nganh) [2020](nam) [điểm trúng tuyển](diem)
+    - [Ke toan](nganh) [2020](nam) [diem trung tuyen](diem)
+    - [Kế toán](nganh) [điểm chuẩn](diem) [2020](nam)
+    - [điểm trúng tuyển](diem) [Chương trình tiên tiến ngành kỹ thuật xây dưng](nganh) [2020](nam) 
+    - [diem trung tuyen](diem) [Chuong trinh tien tien nganh ky thuat xay dung](nganh) [2020](nam) 
+    - [Điểm trúng tuyển](diem) năm [2020](nam) của [Chương trình tiên tiến ngành kỹ thuật xây dưng](nganh) là bao nhiêu?
+    - [Diem trung tuyen](diem) nam [2020](nam) cua [Chuong trinh tien tien nganh ky thuat tai nguyen nuoc](nganh) la bao nhieu ?
+    - [điểm trúng tuyển](diem) [Chương trình tiên tiến ngành kỹ thuật tài nguyên nước](nganh) [2020](nam)
+
+- intent: bot_challenge
+  examples: |
+    - thong
+    - ngành
+    - ma ngành CHSK
+    - tin
+    - xahd
+    - Cong nghe 
+    - abc
+    - Thôngn tin
+    - tôi buồn quá
+    - tôi chán quá
+    - ???
+    - Có phải bạn là bot không ?
+    - Bạn biết gì về kí túc xá của trường không?
+    - Câu lạc bộ tình nguyện hoạt động như thế nào?
+    - Tôi đang nói chuyện với máy hay với người?
+    - Tôi muốn biết về các môn học ngành kế toán.
+    - Quanh trường có nhiều khu nhà trọ sinh viên không?
+    - ban co phai la tu van vien khong
+    
+    
+- intent: goodbye
+  examples: |
+    - chào 
+    - bye
+    - Tạm biệt
+    - Cảm ơn
+    - Chào bạn
+    - Chào tạm biệt
+    - Chào tạm biệt bạn
+    - Tạm biệt cô
+    - Tạm biệt add ạ
+    - Chào, hẹn gặp lại
+    - Goodbye
+
+- intent: ask_nganh_hoc
+  examples: |
+    - Mọi người cho em hỏi trường mình có ngành [điện điện tử](nganh) ko ạ.
+    - Trường đại học Thủy lợi có đào tạo công nghệ thông tin không?
+    - Đại học Thủy lợi có đào tạo quản trị kinh doanh không?
+    - Thủy lợi có đào tạo quản trị kinh doanh không?
+    - Đại học Thủy lợi có đào tạo kinh tế không?
+    - Thủy Lợi có đào tạo kinh tế không?
+    - Đại học Thủy lợi có đào tạo công trình không?
+    - Đại học Thủy lợi có đào tạo ngành [Môi trường] [2020](nam) không?
+    - Đại học Thủy lợi có đào tạo ngành [Kỹ thuật xây dựng công trình thủy](nganh) ko?
+    - Đại học Thủy lợi có đào tạo ngành [kỹ thuật xây dựng](nganh) [2020](nam) không?
+    - Đại học Thủy lợi có đào tạo ngành [công nghệ kỹ thuật xây dựng](nganh) không?
+    - Đại học Thủy lợi có đào tạo ngành [kỹ thuật xây dựng công trình giao thông](nganh) k?
+    - Đại học Thủy lợi có đào tạo ngành [kỹ thuật tài nguyên nước](nganh) k?
+    - Đại học Thủy lợi có đào tạo ngành [kỹ thuật cấp thoát nước](nganh) không?
+    - Đại học Thủy lợi có đào tạo ngành [kỹ thuật cơ sở hạ tầng](nganh) không?
+    - Đại học Thủy lợi có đào tạo ngành [thủy văn học](nganh) không?
+    - Đại học Thủy lợi có đào tạo ngành [kỹ thuật môi trường](nganh) không?
+    - Đại học Thủy lợi có đào tạo ngành [kỹ thuật hóa học](nganh) không?
+    - Đại học Thủy lợi có đào tạo ngành [công nghệ sinh học](nganh) ko?
+    - Trường TL có đào tạo ngành [công nghệ thông tin](nganh) không?
+    - Đại học Thủy lợi có đào tạo ngành [kỹ thuật phần mềm](nganh) không?
+    - Đại học TL có đào tạo ngành [hệ thống thông tin](nganh) không?
+    - Đại học Thủy lợi có đào tạo ngành [kỹ thuật cơ khí](nganh) không?
+    - Đại học Thủy lợi có đào tạo ngành [kỹ thuật ô tô](nganh) không?
+    - Đại học TL có đào tạo ngành [kỹ thuật cơ điện tử](nganh) không?
+    - Trường Thủy lợi có đào tạo ngành [kỹ thuật điện](nganh) không?
+    - Đại học Thủy lợi có đào tạo ngành [kỹ thuật điều khiển và tự động hóa](nganh) k?
+    - Cho em hỏi ĐH Thủy lợi có đào tạo ngành [quản lý xây dựng](nganh) kh?
+    - Cho em hỏi đại học Thủy lợi có đào tạo ngành [Y đa khoa](nganh) ko?
+    - Cho em hỏi ĐH TL có đào tạo ngành [Quản trị khách sạn](nganh) không?
+    - Đại học Thủy lợi có đào tạo ngành [kinh tế](nganh) không?
+    - Em muốn hỏi đại học Thủy lợi có đào tạo ngành [quản trị kinh doanh](nganh) không?
+    - Đại học Thủy lợi có đào tạo ngành [kế toán](nganh) không?
+    - Đại học Thủy lợi có đào tạo ngành [chương trình tiên tiến ngành kỹ thuật xây dựng](nganh) không?
+    - Đại học Thủy lợi có đào tạo ngành [chương trình tiên tiến ngành kỹ thuật tài nguyên nước](nganh) không?
+    - Đại học Thủy lợi có đào tạo ngành [chương trình đào tạo chất lượng cao việt anh ngành kế toán](nganh) không?
+    - Đại học Thủy lợi có đào tạo ngành [chương trình đào tạo chất lượng cao việt anh ngành công nghệ thông tin](nganh) không?
+    - Đại học Thủy lợi có đào tạo ngành [thương mại điện tử](nganh) không?
+    - Đại học Thủy lợi có đào tạo ngành [quản trị dịch vụ và du lịch và lữ hành](nganh) không?
+    - Đại học Thủy lợi có đào tạo ngành [logistics và quản lý chuỗi cung ứng](nganh) không?
+    - Đại học Thủy lợi có đào tạo ngành [ngôn ngữ anh](nganh) [2020](nam) không?    
+    - Truong Dai Hoc Thuy Loi co dao tao nganh [CNTT](nganh) khong ?
+    - Em được 24 điểm có đỗ ngành [CNTT](nganh) không ạ
+
+- intent: motanganh
+  examples: |
+    - Cho em xin [thông tin ngành](mota) [cong nghe thong tin](nganh) của trường mình ạ
+    - Ad cho mình biết về [mục tiêu đào tạo](mota) của ngành [hệ thống thông tin](nganh) của trường mình ạ
+    - Xin [chi tiet](mota) ve nganh [ky thuat phan mem](nganh) a
+    - Tôi muốn biết [đặc trưng](mota) ngành [Công nghệ thông tin](nganh)
+    - Xin [điểm nổi bật](mota) ngành [kỹ thuật phần mềm](nganh)
+    - [dac trung](mota) [cong nghe thong tin](nganh)
+    - [mo ta](mota) ve nganh [he thong thong tin](nganh)
+    - Em muốn biết [đặc trưng](mota) ngành [Kỹ thuật xây dưng công trình thủy](nganh)
+    - Nganh [Ky thuat xay dung cong trinh thuy](nganh) co [dac trung](mota) la?
+    - [Công nghệ kỹ thuật xây dựng](nganh) [điểm nổi bật](mota)
+    - [Cong nghe ky thuat xay dung](nganh) [diem noi bat](mota) 
+    - ngành [Kỹ thuật xây dựng công trình giao thông](nganh) [chi tiết](mota) 
+    - [Muc tieu dao tao](mota) nganh [Ky thuat xay dung cong trinh giao thong](nganh) 
+    - [đặc trưng](mota) [Kỹ thuật tài nguyên nước](nganh) [2020](nam)
+    - [thong tin](mota) [ky thuat tai nguyen nuoc](nganh) [2020](nam) 
+    - Ngành [Kỹ thuật cấp thoát nước] có [mục tiêu đào tạo](mota) là gì?
+    - [diem noi bat](mota) nganh [Ky thuat cap thoat nuoc] 
+    - [Ky thuat co so ha tang](nganh) [mo ta](mota) 
+    - [Kỹ thuật cơ sở hạ tầng](nganh) [điểm nổi bật](mota)
+    - [Mục tiêu đào tạo](mota) của ngành [Thủy văn học](nganh) là bao nhiêu?
+    - Cho em hoi [mo ta](mota) cua nganh [Thuy van hoc](nganh) la bao nhieu?
+    - Xin [thong tin](mota) của [Ky thuat moi truong](nganh) 
+    - Ngành [Kỹ thuật môi trường](nganh) có [điểm nổi bật](mota) là gì
+    - Năm [2020](nam) ngành [Kỹ thuật hóa học](nganh) có [điểm nổi bật](mota)
+    - nam [2020](nam) nganh [Ky thuat hoa hoc](nganh) co [mo ta](mota)
+    - [2020](nam) [Công nghệ sinh học](nganh) có [mục tiêu đào tạo](mota)
+    - [2020](nam) [Cong nghe sinh hoc](nganh) [mo ta](mota)
+    - Tôi muốn biết [thông tin](mota) của ngành [Kỹ thuật cơ khí](nganh) năm [2020](nam) là boa nhiêu?
+    - Toi muon biet [thong tin](mota) cua nganh [Ky thuat co khi](nganh) nam [2020](nam) la bao nhieu?
+    - Ad cho mình hỏi [mục tiêu đào tạo](mota) năm [2020](nam) của ngành [Kỹ thuật ô to](nganh) là
+    - ad cho minh hoi [chi tiet](mota)  nam [2020](nam) cua nganh [Ky thuat o to](nganh) la
+    - Cho hỏi năm [2020](nam) ngành [Kỹ thuật cơ điện tử](nganh) có [điểm chuẩn](diem) là bao nhiêu ?
+    - Ad giúp mình xem thông tin năm [2020](nam) ngành [Kỹ thuật điện](nganh) [đặc trưng](mota)
+    - Ad giup minh xem thong tin [dac trung](mota) nam [2020](nam) nganh [Ky thuat dien](nganh) 
+    - Tôi muốn biết năm [2020](nam) có  ngành [Kỹ thuật điều khiển và tự động hóa](nganh) [mục tiêu đào tạo](mota) là
+    - Toi muon biet nam [2020](nam) co [diem noi bat](mota) nganh [Ky thuat dieu khien va tu dong hoa](nganh) la
+    - Ngành [Quản lý xây dựng](nganh) có [mục tiêu đào tạo](mota) năm [2020](nam) là
+    - Nganh [Quan ly xay dung](nganh) co [mo ta](mota) nam [2020](nam) la
+    - [Kinh tế](nganh) [mục tiêu đào tạo](mota)
+    - [Kinh te](nganh) [mo ta](mota) [2020](nam)
+    - [mục tiêu đào tạo](mota) của ngành [Quản trị kinh doanh](nganh) năm [2020](nam) là
+    - Nganh [Quan tri kinh doanh](nganh) nam [2020](nam) co [mo ta](mota) la
+    - [Kế toán](nganh) [2020](nam) [đặc trưng](mota)
+    - [Ke toan](nganh) [2020](nam) [chi tiet](mota)
+    - Cho em biết thêm [đặc trưng](mota) về ngành
+    - [Đặc trưng](mota) của ngành như nào ạ
+    - Cho em biết thêm [mô tả](mota) về ngành
+    - [Mô tả](mota) của ngành như nào ạ
+    - Cho e biết [điểm nổi bật](mota) ngành là gì
+    - [điểm nổi bật](mota) năm [2021](nam) ngành [Ngôn ngữ anh](nganh)
+    - [Review](mota) về ngành này ạ
+    - Mọi người cho em xin ít [review](mota) về chuyên ngành [tự động hoá](nganh) với
+
+- intent: ts_hoc_ba
+  examples: | 
+    - Cô ơi cho em hỏi trường mình có mấy [phương pháp xét tuyển](ptxt) ạ 
+    - Cho em hỏi là lúc nào trường bắt đầu xét [học bạ](ptxt) thế ạ
+    - cho e hỏi nộp [học bạ](ptxt) được tối đa bao nhiêu nguyện vọng ạ
+    - Muốn đki [xét tuyển](ptxt) thì có nên điền vào nv ko mn ơi
+    - Trường mình có những [hình thức xét tuyển](ptxt) gì ạ
+    - Trường TL có những [phương thức xét tuyển](ptxt) nào?
+    - Em muốn biết tiêu chí [xét tuyển](ptxt)
+    - Thời gian nhận hồ sơ [xét học bạ](ptxt) là khi nào ạ
+    - Khi nào thì kết thúc nhận [hồ sơ](ptxt)
+
+- intent: pt1
+  examples: |
+    - Em muốn biết tiêu chí xét [tuyển thẳng](pt1)
+    - Xét [tuyển thẳng](pt1) có những yêu cầu gì
+    - Chỉ tiêu [tuyển thẳng](pt1) là bao nhiêu
+    - Em là sinh viên có học lực loại giỏi 3 năm lớp 10, 11, 12 có đủ tiêu chuẩn xét [tuyển thẳng](pt1) k
+    - Khi nào trường bắt đầu nhận hồ sơ xét [tuyển thẳng](pt1) ạ
+    - Em có chứng chỉ Tiếng Anh 5.0 IELTS có đạt tiêu chí xét [tuyển thẳng](pt1) kh?
+    - Trường Thủy Lợi xét [tuyển thẳng](pt1) như thế nào
+    - Trường TL xét [tuyển thẳng](pt1) ntn
+
+- intent: pt2
+  examples: | 
+    - Mn ơi cho em hỏi [điểm học bạ](pt2) của em có 23.7 có thể đậu được cntt không ạ 
+    - Cho em hỏi là lúc nào trường bắt đầu xét [học bạ](pt2) thế ạ
+    - cho e hỏi nộp [học bạ](pt2) được tối đa bao nhiêu nguyện vọng ạ
+    - Muốn đki [xét tuyển](pt2) thì có nên điền vào nv ko mn ơi
+    - Ae ơi cho em hỏi điểm [học bạ](pt2) của em tầm 22,3đ thì lên theo ngành j của trường với ạ
+    - [Điểm học bạ](pt2) em tầm 21,05 nẻn xét ngành nào đc ạ mn
+    - [Điểm học bạ](pt2) của em khoảng 24.5 có đỗ được vào khoa [cntt](nganh) không ạ
+    - Cho em hỏi là [học bạ](pt2) em tầm hơn 23,5 thì có đỗ được [QTKD](nganh) vs [kế toán](nganh) ko ạ em hơi hoang mang
+    - 23₫ [học bạ](pt2) có đậu [qtkd](nganh) ko ạ
+    - Cho em hỏi [học bạ](pt2) 5 kì 20,4 có hi vọng vào học bạ được không
+    - Mng cho e hỏi điểm [học bạ](pt2) e 6 kì tầm 21.4 thì liệu có đỗ được kỹ thuật ô tô k ạ
+    - Cách tính điểm [xét tuyển học bạ](pt2) như thế nào
+    - Em muôn biết thêm thông tin về phương thức [xét tuyển học bạ](pt2)
+
+- intent: pt3
+  examples: |
+    - Em muốn biết tiêu chí xét [điểm thi THPT](pt3)
+    - [điểm thi THPT](pt3) có những yêu cầu gì
+    - Chỉ tiêu [điểm thi THPT](pt3) là bao nhiêu
+    - Em là sinh viên có học lực loại giỏi 3 năm lớp 10, 11, 12 có đủ tiêu chuẩn [xét tuyển thẳng](pt3) k
+    - Khi nào trường bắt đầu nhận hồ sơ xét tuyển [điểm thi THPT](pt3) ạ
+    - Trường Thủy Lợi xét [điểm tổng các môn thi](pt3) như thế nào
+    - Trường TL xét [điểm tổng các môn thi](pt3) ntn
+    - [điểm tổng các môn thi](pt3) trong kỳ thi THPTQG bao nhiêu thì đỗ vào khoa cntt(nganh) ạ
+    - [Điểm thi](pt3) của em khoảng 24.5 có đỗ được vào khoa [cntt](nganh) không ạ
+    - Cho em hỏi là [điểm thi](pt3) em khối A tầm hơn 23,5 thì có đỗ được [QTKD](nganh) vs [kế toán](nganh) ko ạ em hơi hoang mang
+    - 23₫ [khối A1](pt3) có đậu [qtkd](nganh) ko ạ
+    - [Tiêu chí phụ](pt3) để xét tuyển ngành [quản trị kinh doanh](pt3) là gì
+    - Em thi được 25đ [khối A1](pt3) có đỗ vào ngành [Điện điện tử](nganh) với [kỹ thuật cơ khí](nganh) được không
+
+- intent: ask_tuition_money
+  examples: | 
+    - Bao nhieu [tien](money) mot tin chi 
+    - Bao nhiêu [tiền](money) một tín chỉ vậy ạ?
+    - Một kì học cần bao nhiêu tiền [học phí](money) năm [2020](nam) vậy?
+    - Chương trình học tiên tiến thì [học phí](money) bao nhiêu ạ?
+    - Học cntt tiếng Nhật thì hết bao nhiêu 1 kỳ?
+    - Học công nghệ thông tin tiếng Nhật học phí bao nhiêu ạ?
+    - Các ngành đào tạo bằng tiếng Anh có học phí bao nhiêu ạ?
+    - [Học phí](hocphi) thế nào?
+    - [Học phí](hocphi) tính như nào ạ?
+    - Mình cần biết thêm thông tin học phí năm [2021](nam)
+    - Học phí chương trình tiên tiến như thế nào
+    - [chi phí](money) năm [2021](nam) có đắt không
+    - Tính học phí kiểu gì
+    - Bao nhiêu [tiền học](money) phí cho một năm học
+    - Bao nhiêu tiền học phí cho một kỳ học
+    - Đại học Thủy Lợi có học phí như thế nào?
+    - Học phí thì như nào?
+    - Học phí
+    - Cho em hỏi học phí trường mình bao nhiêu 1 kỳ
+    - Cho em hoi hoc phi truong TL bao nhieu
+    - Trường TL có [mức học phí](money) bao nhiêu ạ?
+    - Tiền học phí trường mình như nào?
+    
+
+- intent: ask_yes
+  examples: |
+    - Đại học Thủy lợi có xét tuyển học bạ không?
+    - Thủy Lợi có đào tạo hệ cao đẳng không?
+    - Đại học thủy lợi có đào tạo hệ tiến sĩ không?
+    - Thủy Lợi có cơ sở trong Thành phố Hồ chí minh không?
+    - Thủy Lợi có cơ sở ở Hưng yên k?
+    - Đại học Thủy Lợi có bể bơi riêng không?
+    - Đại học Thủy Lợi có sân bóng riêng k?
+    - Trong trường có nhiều câu lạc bộ không?
+    - Ở trường có nhiều CLB không?
+    - Thủy lợi học theo tín chỉ đúng không?
+    - Thầy cô giáo có nhiệt tình không?
+    - Thầy cô và bạn bè có thân thiện không
+    - Mình có thể đỗ vào trường ĐH Thủy lợi không?
+    
+- intent: ask_no
+  examples: |
+    - Đại học Thủy lợi học phí đắt không?
+    - Đại học TL có đào tạo các ngành [y tế](nganh) không?
+    - Đại học TL có đào tạo ngành [truyền thông](nganh) không?
+    - Đại học TL có đào tạo ngành [Kinh tế biển](nganh) không?
+    - Đại học TL có đào tạo ngành [Bảo mật thông tin](nganh) không?
+    - Thủy lợi có hay bị ngập nước khi trời mưa như lời đồn không?
+    - Một năm học có mất nhiều chi phí tiền học không ạ?
+    - Truong Thuy Loi co dao tao nganh [y te](nganh) khong?
+
+- intent: ask_infor_uni
+  examples: |
+    - [Bạn biết gì về đại học Thủy Lợi](truycap)
+    - Cho mình biết [thông tin về trường](truycap) với.
+    - [Trang web](truycap) của Thủy lợi là gì vậy
+    - Đại học Thủy lợi có trang [facebook](truycap) không? Đó là gì thế? 
+    - Cho mình xin [thông tin về cơ sở](truycap) DHTL a .
+    - Trường đại học Thủy lợi có gì?
+    - Mình muốn biết thêm [thông tin về trường](truycap)
+    - Xin link [FB](truycap) của trường
+    - Cho hỏi [Website](truycap) của trường
+    - [Page](truycap) trường là gì bạn ơi
+    - Trường Thuy Lơi có [thông tin trường](truycap) không
+    - Làm sao để biết thêm thông tin trường
+    - [Facebook](truycap) trường Đại học Thủy Lợi là gì
+    - [website](truycap) của trường mình
+    - Cho mình xin ít [review](truycap) về trường ạ.
+
+- intent: thanks
+  examples: |
+    - Cám ơn
+    - Thanks
+    - Thank you
+    - Ok
+    - Cảm ơn bạn
+    - Cảm ơn bạn nhiều nhé
+    - Thực sự rất cảm ơn
+    - Cam on
+    - Cảm ơn
+    - Thoát
+    - thoát
+    - Thoat
+
+
+    
+
+
